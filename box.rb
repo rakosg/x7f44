@@ -5,10 +5,16 @@ class Box
   def initialize(number_of_tiles)
     @number_of_tiles = number_of_tiles
     @tiles = []
-    @number_of_tiles.times do |i|
-      @tiles << i + 1
-    end
     @shut_tiles = []
+  end
+
+  def navigate_tiles
+    self.navigate
+  end
+
+  private def navigate
+    number_of_tiles.times do |i|
+      tiles << i + 1
   end
 
   def shut?
