@@ -18,6 +18,10 @@ class Box
   end
 
   def shut?
+    self.should_we_shut?
+  end
+
+  private def should_we_shut?
     @tiles.empty? && @shut_tiles.length == number_of_tiles
   end
 
