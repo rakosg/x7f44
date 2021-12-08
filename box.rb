@@ -6,17 +6,13 @@ class Box
     @number_of_tiles = number_of_tiles
     @tiles = []
     @shut_tiles = []
-  end
-
-  def navigate_tiles
-    self.navigate
-  end
-
-  private def navigate
+    
     number_of_tiles.times do |i|
       tiles << i + 1
+    end
+    
   end
-
+  
   def shut?
     self.should_we_shut?
   end
@@ -29,7 +25,7 @@ class Box
     false
   end
 
-  def get_tiles
+  def getTiles
     tiles
   end
 
