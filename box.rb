@@ -29,7 +29,7 @@ class Box
     false
   end
 
-  def getTiles
+  def get_tiles
     tiles
   end
 

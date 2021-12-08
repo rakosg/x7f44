@@ -22,16 +22,24 @@ class Game
     dice.each(&:roll!)
   end
 
-  def play
-    print '| '
-    box.getTiles().each do |tile|
+  def retrieve_tiles
+    box.get_tiles().each do |tile|
       print tile.to_s + ' | '
     end
-    print "\n"
-    print "You rolled: "
+  end
+
+  def die_values
     dice.each do |die|
       print "#{die.value} "
     end
+  end
+
+  def play
+    print '| '
+    retrieve_tiles
+    print "\n"
+    print "You rolled: "
+    die_values
     puts "\n"
     puts "Which tiles would you like to flip (separate by spaces): "
     tiles_to_flip = gets.chomp
