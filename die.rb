@@ -1,8 +1,7 @@
 class Die
 
-  attr_reader :number_of_sides
+  attr_reader :number_of_sides, :prng
   attr_accessor :value
-  attr_reader :prng
 
   def initialize(number_of_sides)
     @number_of_sides = number_of_sides
@@ -14,16 +13,8 @@ class Die
     self.value = prng.rand(1..number_of_sides)
   end
 
-  def makeRoll
-        roll!
+  def make_roll
+      roll!
     end
-
-#
-#
-  # def to_s
-  #   value
-  # end
-#
-# end
 
 end
