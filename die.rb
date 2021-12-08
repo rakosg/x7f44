@@ -11,11 +11,15 @@ class Die
   end
 
   def roll!
+    self.rolling
+  end
+
+  private def rolling
     self.value = prng.rand(1..number_of_sides)
   end
 
-  def makeRoll
-      roll!
-    end
+  def make_roll
+    roll!
+  end
 
 end
