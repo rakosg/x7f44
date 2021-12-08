@@ -7,10 +7,14 @@ class Box
     @tiles = []
     @shut_tiles = []
     
+    create_tiles
+    
+  end
+
+  def create_tiles
     number_of_tiles.times do |i|
       tiles << i + 1
     end
-    
   end
   
   def shut?
