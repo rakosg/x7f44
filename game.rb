@@ -18,17 +18,17 @@ class Game
     prepare_next_round
   end
 
-  def prepare_next_round
+  private def prepare_next_round
     dice.each(&:roll!)
   end
 
-  def retrieve_tiles
+  private def retrieve_tiles
     box.get_tiles().each do |tile|
       print tile.to_s + ' | '
     end
   end
 
-  def die_values
+  private def die_values
     dice.each do |die|
       print "#{die.value} "
     end
