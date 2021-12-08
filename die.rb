@@ -17,8 +17,4 @@ class Die
     self.value = prng.rand(1..number_of_sides)
   end
 
-  def make_roll
-    roll!
-  end
-
 end
